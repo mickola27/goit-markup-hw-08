@@ -1,0 +1,33 @@
+.features__list {
+    display: flex;
+  }
+  
+  .features__item + .features__item {
+    margin-left: 30px;
+  }
+  
+  .features__box {
+    @include flex-center();
+    width: 270px;
+    height: 120px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    background-color: var(--team-background-color);
+    
+  }
+  
+  .features__title {
+    margin-bottom: 10px;
+    font-weight: 700;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+  
+  .features__text {
+    margin: 0;
+    font-weight: normal;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--text-color);
+  }
