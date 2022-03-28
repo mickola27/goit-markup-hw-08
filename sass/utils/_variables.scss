@@ -1,12 +1,18 @@
 :root {
-    --logo-text-color: #000000;
-    --button-hero-footter-color: #ffffff;
-    --accent-color: #2196f3;
-    --team-background-color: #f5f4fa;
-    --button-color-accent: #188ce8;
-    --title-text-color: #212121;
-    --text-color: #757575;
-    --footer-background-color: #2f303a;
-    --footer-color-mail-tel: rgba(255, 255, 255, 0.6);
-    --color-link: #afb1b8;
-  }
+  --brandColor: #2196F3;
+  --brandHover: #188CE8;
+  --firstFontColor: #212121;
+  --secondFontColor: #757575;
+  --lightFontColor: #ffffff;
+  --mainBg: #2F303A;
+  --sectionBg: #F5F4FA;
+  --nullBg: #ffffff;
+  --iconColor: #AFB1B8;
+  --mainLetterSpacing: 0.03em;
+  --mainTransition: cubic-bezier(0.4, 0, 0.2, 1);
+  --mainTransitionTime: 250ms;
+}
+
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1200px;

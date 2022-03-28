@@ -1,33 +1,73 @@
-.features__list {
+.features {
+
+  @media screen and (min-width: $tablet) {
     display: flex;
+    flex-wrap: wrap;
   }
-  
-  .features__item + .features__item {
-    margin-left: 30px;
+
+  @media screen and (min-width: $tablet) and (max-width: 1199.5px) {
+    margin: -15px;
   }
-  
-  .features__box {
-    @include flex-center();
+}
+
+.features__item {
+
+  @media screen and (min-width: $tablet) and (max-width: 1199.5px) {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc((100% - 3 * 30px) / 4);
+  }
+
+  &:not(:last-child) {
+
+    @media screen and (max-width: 767.5px) {
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: $desktop){
+      margin-right: 30px;
+    }
+  }
+}
+
+.features__box {
+  @include flex-center();
+  background-color: #F5F4FA;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  height: 120px;
+
+  @media screen and (min-width: $mobile) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 354px;
+  }
+
+  @media screen and (min-width: $desktop) {
     width: 270px;
-    height: 120px;
-    border-radius: 4px;
-    margin-bottom: 30px;
-    background-color: var(--team-background-color);
-    
   }
-  
-  .features__title {
-    margin-bottom: 10px;
-    font-weight: 700;
-    line-height: calc(16 / 14);
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
+}
+
+.features__title {
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: var(--mainLetterSpacing);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
   }
-  
-  .features__text {
-    margin: 0;
-    font-weight: normal;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    color: var(--text-color);
-  }
+}
+
+.features__text {
+  line-height: 1.71;
+  letter-spacing: var(--mainLetterSpacing);
+  color: var(--secondFontColor)
+}
+

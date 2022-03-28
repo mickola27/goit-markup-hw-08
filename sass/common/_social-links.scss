@@ -1,51 +1,40 @@
 .social {
-    @include flex-center();
+  display: flex;
+  justify-content: center;
+}
+
+.social__item {
+  width: 44px;
+  height: 44px;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.social__link {
+  @include flex-center();
+  width: 100%;
+  height: 100%;
+  outline: none;
+  color: var(--iconColor);
+  border-radius: 50%;
+  transition: background-color var(--mainTransitionTime) var(--mainTransition), 
+  color var(--mainTransitionTime) var(--mainTransition);
+
+  &--dark-bg {
+    color: var(--nullBg);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
   }
 
-  .social__item:not(:last-child) {
-    margin-right: 10px;
+  &:focus,
+  &:hover {
+    background-color: var(--brandColor);
+    color: var(--nullBg);
   }
-  
-  .social__link {
-    @include flex-center();
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    
-    fill: var(--color-link);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
-        &:hover,
-        &:focus {
-  
-    background-color: var(--accent-color);
-    fill: var(--button-hero-footter-color);
-  }
-  }
-  
-  .social-footer {
-    @include flex-center();
-  }
-  
-  .social-footer__item:not(:last-child) {
-    margin-right: 10px;
-  }
-  
-  .social-footer__link {
-    @include flex-center();
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    
-    background-color: rgba(255, 255, 255, 0.1);
-    fill: var(--button-hero-footter-color);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
-        &:hover,
-        &:focus {
-                    background-color: var(--accent-color);
-  }
-  }
-  
-  
-  
+}
+
+.social__icon {
+  fill: currentColor;
+}

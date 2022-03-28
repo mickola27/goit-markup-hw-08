@@ -1,0 +1,52 @@
+.menu {
+  display: flex;
+}
+
+.menu__logo {
+  display: block;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+    margin-right: 88px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
+  }
+}
+
+.menu__button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  background-color: transparent;
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+
+  &:focus,
+  &:hover {
+    color: var(--brandColor);
+  }
+}
+
+.menu__button--left {
+  margin-left: auto;
+}
+
+.menu__button--absolute-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.menu__icon {
+  fill: currentColor;
+}
+
